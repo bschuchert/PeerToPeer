@@ -17,8 +17,8 @@
 		C546E4B216B5FE4F0065AD4A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C546E4B116B5FE4F0065AD4A /* Default@2x.png */; };
 		C546E4B416B5FE4F0065AD4A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C546E4B316B5FE4F0065AD4A /* Default-568h@2x.png */; };
 		C546E4B716B5FE4F0065AD4A /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C546E4B516B5FE4F0065AD4A /* MainStoryboard_iPhone.storyboard */; };
-		C546E4BA16B5FE4F0065AD4A /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C546E4B816B5FE4F0065AD4A /* MainStoryboard_iPad.storyboard */; };
 		C546E4BD16B5FE4F0065AD4A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C546E4BC16B5FE4F0065AD4A /* ViewController.m */; };
+		C546E4C816B5FEC70065AD4A /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C546E4C716B5FEC70065AD4A /* GameKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,9 +36,9 @@
 		C546E4B116B5FE4F0065AD4A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		C546E4B316B5FE4F0065AD4A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C546E4B616B5FE4F0065AD4A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		C546E4B916B5FE4F0065AD4A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		C546E4BB16B5FE4F0065AD4A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C546E4BC16B5FE4F0065AD4A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C546E4C716B5FEC70065AD4A /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C546E4C816B5FEC70065AD4A /* GameKit.framework in Frameworks */,
 				C546E49E16B5FE4F0065AD4A /* UIKit.framework in Frameworks */,
 				C546E4A016B5FE4F0065AD4A /* Foundation.framework in Frameworks */,
 				C546E4A216B5FE4F0065AD4A /* CoreGraphics.framework in Frameworks */,
@@ -75,6 +76,7 @@
 		C546E49C16B5FE4F0065AD4A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C546E4C716B5FEC70065AD4A /* GameKit.framework */,
 				C546E49D16B5FE4F0065AD4A /* UIKit.framework */,
 				C546E49F16B5FE4F0065AD4A /* Foundation.framework */,
 				C546E4A116B5FE4F0065AD4A /* CoreGraphics.framework */,
@@ -88,7 +90,6 @@
 				C546E4AC16B5FE4F0065AD4A /* AppDelegate.h */,
 				C546E4AD16B5FE4F0065AD4A /* AppDelegate.m */,
 				C546E4B516B5FE4F0065AD4A /* MainStoryboard_iPhone.storyboard */,
-				C546E4B816B5FE4F0065AD4A /* MainStoryboard_iPad.storyboard */,
 				C546E4BB16B5FE4F0065AD4A /* ViewController.h */,
 				C546E4BC16B5FE4F0065AD4A /* ViewController.m */,
 				C546E4A416B5FE4F0065AD4A /* Supporting Files */,
@@ -165,7 +166,6 @@
 				C546E4B216B5FE4F0065AD4A /* Default@2x.png in Resources */,
 				C546E4B416B5FE4F0065AD4A /* Default-568h@2x.png in Resources */,
 				C546E4B716B5FE4F0065AD4A /* MainStoryboard_iPhone.storyboard in Resources */,
-				C546E4BA16B5FE4F0065AD4A /* MainStoryboard_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,14 +199,6 @@
 				C546E4B616B5FE4F0065AD4A /* en */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		C546E4B816B5FE4F0065AD4A /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C546E4B916B5FE4F0065AD4A /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -271,6 +263,7 @@
 				GCC_PREFIX_HEADER = "PeerToPeer/PeerToPeer-Prefix.pch";
 				INFOPLIST_FILE = "PeerToPeer/PeerToPeer-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -282,6 +275,7 @@
 				GCC_PREFIX_HEADER = "PeerToPeer/PeerToPeer-Prefix.pch";
 				INFOPLIST_FILE = "PeerToPeer/PeerToPeer-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -305,6 +299,7 @@
 				C546E4C216B5FE4F0065AD4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
